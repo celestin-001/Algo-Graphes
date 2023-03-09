@@ -1,0 +1,38 @@
+ while(nbmur!=cmpt-((laby.largeur*laby.hauteur)-1)){
+    int nbAlea=rand()%(laby.largeur*laby.hauteur);
+    int cleMur=rand()%4;
+    while(nbAlea+Tab[cleMur]<0 || nbAlea+Tab[cleMur]>=laby.largeur*laby.hauteur)
+    {
+     cleMur=rand()%4;
+    }
+    cout<<nbAlea<<"----"<<nbAlea+Tab[cleMur]<<endl;
+    int pos=(nbAlea+Tab[cleMur]);
+    if((cleMur==0 || cleMur==1) && laby.mursV[pos]==true){
+      if(laby.cell[pos]!=laby.cell[nbAlea] && Tab[cleMur]<0){
+        laby.mursV[nbAlea]=false;
+        laby.cell[pos]=laby.cell[nbAlea];
+      }
+      else if(laby.cell[pos]!=laby.cell[nbAlea] && Tab[cleMur]>0){
+        laby.mursV[pos]=false;
+        laby.cell[pos]=laby.cell[nbAlea];
+      }
+      
+      //cout<<pos<<endl;
+    }
+    
+    else if((cleMur==2 || cleMur==3) && laby.mursH[pos]==true){
+      if(laby.cell[pos]!=laby.cell[nbAlea] && Tab[cleMur]<0){
+        laby.mursH[nbAlea]=false;
+        laby.cell[pos]=laby.cell[nbAlea];
+      }
+      else if(laby.cell[pos]!=laby.cell[nbAlea] && Tab[cleMur]>0){
+        laby.mursH[pos]=false;
+        laby.cell[pos]=laby.cell[nbAlea];
+      }
+      //cout<<pos<<endl;
+    } 
+    
+    //cout<<pos<<endl;
+    //nbmur--;
+    nbmur=nombreDemur(laby);
+    cout<<nbmur<<endl;
