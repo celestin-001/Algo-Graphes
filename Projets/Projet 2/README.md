@@ -46,6 +46,3 @@ Le code fourni comprend des déclarations de fonctions liées à la gestion du l
 - Le projet utilise un algorithme de génération de labyrinthe basé sur l'algorithme de Kruskal. L'implémentation de cet algorithme est importante pour générer des labyrinthes.
 
 - Lors de l'exécution du programme, assurez-vous que la bibliothèque `<fstream>` est correctement incluse et que vous avez les droits d'écriture dans le répertoire où vous souhaitez enregistrer le fichier SVG.
-
-N'hésitez pas à personnaliser ce README en fonction des besoins de votre projet et à ajouter des détails sur l'implémentation manquante. Bonne continuation !
-
